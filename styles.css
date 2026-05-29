@@ -1,0 +1,96 @@
+/* styles.css - Custom Animations and Layout Enhancements for Killian Marketing Agency */
+
+/* Base animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.93);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px 6px rgba(0, 102, 204, 0.25);
+    }
+}
+
+/* Animation utilities */
+.animate-fade-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pop-in {
+    opacity: 0;
+    animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.glow-btn {
+    animation: pulseGlow 3.5s infinite;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+/* Custom lively hover micro-interactions */
+.hover-pop {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hover-pop:hover {
+    transform: translateY(-5px) scale(1.015);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 102, 204, 0.04);
+}
+
+/* Beautiful custom background grids & overlays */
+.hero-grid {
+    background-color: #fafbfc;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(224, 239, 254, 0.6) 0px, transparent 50%), 
+        radial-gradient(at 100% 0%, rgba(243, 232, 255, 0.4) 0px, transparent 50%),
+        linear-gradient(to right, rgba(0, 102, 204, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 102, 204, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 24px 24px, 24px 24px;
+}
+
+/* Sub-page decorative backgrounds */
+.sub-hero-grid {
+    background-color: #fafbfc;
+    background-image: 
+        radial-gradient(at 50% 0%, rgba(224, 239, 254, 0.7) 0px, transparent 60%),
+        linear-gradient(to right, rgba(0, 102, 204, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px;
+}
