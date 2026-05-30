@@ -126,23 +126,27 @@
 
                 <!-- Form block -->
                 <div class="md:col-span-7 bg-white rounded-2xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover-pop">
-                    <form action="#" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Your Name</label>
-                            <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Email</label>
-                            <input type="email" required placeholder="john@project.com" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Message / Request Details</label>
-                            <textarea rows="4" required placeholder="Details about your token project, requirements, etc." class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-4 px-4 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-lg transition-colors shadow-lg shadow-brand-500/10 hover:shadow-brand-500/20">
-                            Submit Form
-                        </button>
-                    </form>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+    <!-- Replace YOUR_ACCESS_KEY_HERE with the key you get from Web3Forms -->
+    <input type="hidden" name="access_key" value="c5fb1d9a-a522-4a65-a8ba-c3ae5b1b5dfd">
+    
+    <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1">Your Name</label>
+        <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
+    </div>
+    <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1">Email</label>
+        <input type="email" name="email" required placeholder="john@project.com" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all">
+    </div>
+    <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1">Message / Request Details</label>
+        <textarea name="message" rows="4" required placeholder="Details about your token project, requirements, etc." class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"></textarea>
+    </div>
+    <button type="submit" class="w-full py-4 px-4 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-lg transition-colors shadow-lg shadow-brand-500/10 hover:shadow-brand-500/20">
+        Submit Form
+    </button>
+</form>
+
                 </div>
             </div>
         </div>
